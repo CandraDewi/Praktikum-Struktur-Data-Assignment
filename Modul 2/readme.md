@@ -8,7 +8,7 @@ Bahasa pemrogrman Array merupakan bahasa pemrograman yang menggunakan indeks yan
 
 
 ### 1. Array Satu Dimensi
-Array satu dimensi adalah kumpulan elemen yang bersebelahan di mana individu elemen diidentifikasi oleh subskrip integer unik yang dimulai dengan nol. Sekali array dibuat, ukurannya tidak dapat diubah[2]. Setiap elemen di dalam array memiliki sebuah indeks atau nomor yang digunakan untuk mengakses elemen tersebut. Indeks dimulai dari 0 dan berakhir pada jumlah elemen dikurangi satu. 
+Array satu dimensi adalah kumpulan elemen yang berdampingan dimana masing-masing diidentifikasi oleh subskrip integer tunggal yang dimulai dengan nol. Setiap elemen dalam array memiliki indeks atau angka yang memungkinkan pengguna dapat mengakses elemet tersebut [2].
 
 Contohnya, sebuah array satu dimensi yang berisi bilangan bulat {1, 2, 3, 4, 5} memiliki lima elemen dan indeksnya dimulai dari 0. Indeks 0 merujuk pada elemen pertama, indeks 1 merujuk pada elemen kedua, dan seterusnya hingga indeks 4 merujuk pada elemen kelima
 
@@ -301,7 +301,7 @@ int main() { //main program
         	cout << "\nNilai Rata-rata: " << summary << endl;
             break;
         case 0: //jika ingin keluar dari looping maka bisa menginputkan angka 0
-        	cout << "\nThank you for using this program. Goodbye!" << endl;
+        	cout << "\nThank you User!-2311110026_Candra Manika Dewi" << endl;
             break;
         default: //error message jika menginputkan selain angka 1, 2, 3, dan 0
     		cout << "\nInvalid input. Please enter either '1', '2', '3', or '0'." << endl;
@@ -313,12 +313,16 @@ int main() { //main program
 }
 ```
 #### Output:
+![image](https://github.com/CandraDewi/Praktikum-Struktur-Data-Assignment/assets/87966244/15cb77e6-67c1-4b6d-8b11-c64ad36ca898)
+
 
 Kode di atas digunakan untuk mencetak program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata – rata dari suatu array dengan input yang dimasukan oleh user. Pertama kita mendeklarasikan variabel yang akan digunakan. Disini untuk variabel `minimum` di set ke dalam `99999` karena variabel ini akan digunakan untuk pembanding dari nilai array. Kemudian kita membuat fungsi untuk menginputkan panjang array. Setelah menginputkan panjang array, kita perlu memasukan nilai ke dalam array sesuai dengan panjang array yang sudah diinputkan tadi. Lalu kita membuat fungsi untuk mencari nilai minimum, maksimum, dan rata-rata. Untuk minimum kita mencarinya dengan cara membandingkan nilai array dengan variabel `minimum`. Jika nilai pada array lebih kecil daripada variabel `minimum` maka variabel `minimum` akan diubah sesuai dengan nilai array. Kemudian hal tersebut diulang sampai menemukan nilai minimumnya. Hal tersebut juga sama jika kita ingin mencari nilai maksimumnya. 
 
 Untuk mencari rata-rata kita menjumlahkan seluruh elemen dan kemudian dibagi dengan panjang array. Setelah membuat fungsi, kita perlu membuat menu untuk user. Dengan menggunakan looping `do-while`, kita membuat menu yang didalamnya berisi `switch`. Jika kita mengiputkan angka 1 maka program otomatis akan mengarahkan untuk mencari nilai maksimum, angka 2 akan mengarahkan untuk mencari nilai minimum, angka ke 3 akan mengarahkan untuk mencari rata-rata. Lalu untuk mengakhiri menu atau looping, kita bisa menginputkan angka 0. Jika kita menginputkan angka selain 1, 2, 3, ataupun 0 maka otomatis akan muncul pesan error. Jika user menginputkan angka selain 0 maka program otomatis akan mengulang hingga user menginputkan angka 0 untuk mengakhiri loop.
 
 #### Full code Screenshot:
+![image](https://github.com/CandraDewi/Praktikum-Struktur-Data-Assignment/assets/87966244/e046a73a-1b63-4b92-90a6-2a20b14a8f47)
+
 
 
 ## Kesimpulan
