@@ -4,8 +4,8 @@
 
 
 ## Dasar Teori
+Bahasa pemrogrman Array merupakan bahasa pemrograman yang menggunakan indeks yang berbeda namun tipe datanya sama. Program ini berfungsi dalam menentukan nilai rata-rata suatu data atau sering disebut dengan mean. Terdapat beberapa jenis array yaitu: 
 
-Array (larik) ialah penampung sejumlah data sejenis (homogen) yang menggunakan satu identifier (pengenal). Masing-masing elemen larik diakses menggunakan indeks (subscript) dari nol sampai n-1 (n menyatakan jumlah elemen larik). Pengolahan data larik harus per elemen. Elemen larik dapat diakses langsung (acak). Tujuannya adalah untuk memanipulasi elemen keempat tidak harus melalui elemen pertama, kedua, dan ketiga. Berdasarkan banyaknya indeks, larik dibagi menjadi larik satu dimensi dan multidimensi (dua dimensi dan tiga dimensi)[1].
 
 ### 1. Array Satu Dimensi
 Array satu dimensi adalah kumpulan elemen yang bersebelahan di mana individu elemen diidentifikasi oleh subskrip integer unik yang dimulai dengan nol. Sekali array dibuat, ukurannya tidak dapat diubah[2]. Setiap elemen di dalam array memiliki sebuah indeks atau nomor yang digunakan untuk mengakses elemen tersebut. Indeks dimulai dari 0 dan berakhir pada jumlah elemen dikurangi satu. 
@@ -25,53 +25,54 @@ Array multidimensi memiliki kesamaan dengan array satu dimensi dan dua dimensi, 
 ```C++
 #include <iostream>
 using namespace std;
+//program input array 3 dimensi
 
-//PROGRAM INPUT ARRAY 3 DIMENSI
-int main() {
-	//Deklarasi Array
-	int arr[2][3][3];
+int main()
+{
+    //deklarasi array
+    int arr[2][3][3];
+    //input elemen
+    for (int x=0; x<2; x++)
+    {
+        for (int y=0; y<3; y++)
+        {
+            for (int z=0; z<3; z++)
+            {
+                cout << "Input Array[" << x << "][" << y << "][" << z << "] = ";
+                cin >> arr[x][y][z];
+            }
+        }
+        cout << endl;
+    }
+    //output array
+    for (int x=0; x<2; x++)
+    {
+        for (int y=0; y<3; y++)
+        {
+            for (int z=0; z<3; z++)
+            {
+                cout << "Data Array [" << x <<"][" << y <<"][" << z <<"] = " << arr[x][y][z] << endl;
+            }
+        }
 
-	//Input elemen
-	for (int x = 0; x < 2; x++)
-	{
-		for (int y = 0; y < 3; y++)
-		{
-			for (int z = 0; z < 3; z++)
-			{
-				cout << "Input Array[" << x << "][" << y << "][" << z << "] = ";
-				cin >> arr[x][y][z];
-			}
-		}
-		cout << endl;
-	}
+    }
+    cout << endl;
+    //tampilkan array
+    for (int x=0; x<2; x++)
+    {
+        for (int y=0; y<3; y++)
+        {
+            for (int z=0; z<3; z++)
+            {
+                cout << arr [x][y][z] << ends;
+            }
+            cout << endl;
+        }
+        cout << endl;
+    }
 
-	//Output array
-	for (int x = 0; x < 2; x++)
-	{
-		for (int y = 0; y < 3; y++)
-		{
-			for (int z = 0; z < 3; z++)
-			{
-				cout << "Data Array[" << x << "][" << y << "][" << z << "] = " << arr[x][y][z] << endl;
-			}
-		} 
-	}
-
-	cout << endl;
-	//Tampilan array
-	for (int x = 0; x < 2; x++)
-	{
-		for (int y = 0; y < 3; y++)
-		{
-			for (int z = 0; z < 3; z++)
-			{
-				cout << arr[x][y][z] << ends;
-			}
-			cout << endl;
-		}
-		cout << endl;
-	}
 }
+
 ```
 Kode di atas digunakan untuk mencetak array tiga dimensi. Pertama membuat variabel `arr` dengan mengisi x, y, dan z dengan `[2][3][4]`. Lalu kita membuat nested looping untuk menginputkan angka kedalam elemen. Lalu setelah itu, kita membuat nested looping kembali untuk menampilkan angka pada setiap elemen yang sudah diinputkan tadi. Setelah itu, kita membuat kembali nested loop untuk menampilkan angka pada elemen, namun kali ini hanya ditampilkan nilainya saja tanpa perlu menampilkan setiap angka dan elemennya.
 
@@ -123,122 +124,122 @@ Kemudian kita akan mencari nilai maksimumnya dengan cara kita membuat variabel `
 ### 1. Buatlah program untuk menampilkan Output seperti berikut dengan data yang diinputkan oleh user!
 
 ```C++
-#include <iostream> //input preprocessor directive
-using namespace std; //supaya tidak perlu menggunakan std:: disetiap input object or function
+#include <iostream>
+#include <vector>
 
-int main() //main program
-{
-    int panjang; //mendeklarasikan variabel panjang dengan tipe data integer
-    cout << "Masukkan panjang array: "; //input panjang array yang akan dibuat
-    cin >> panjang;
-    int arr[panjang]; //mendeklarasikan array sesuai dengan input panjang array dari user
+using namespace std;
 
-    cout << "Masukkan " << panjang << " angka\n"; //menginputkan nilai ke dalam array yang sudah di inputkan
-    for (int i = 0; i < panjang; i++)
-    {
-        cout << "Array ke - " << i << ": "; //input elemen array 
-        cin >> arr[i];
+int main() {
+    vector<int> data;
+    int num;
+
+    //Meminta inputan sebanyak 10 data array kepada user
+    cout << "Masukkan 10 data array:\n";
+
+    //meminta input sebanyak 10 kali dan menyimpan input tersebut ke dalam vektor 'data'.
+    for (int i = 0; i < 10; i++) {
+        cin >> num;
+        data.push_back(num);
+    }
+
+    //memisahkan elemen array yang terdapat dalam vektor data menjadi genap dan ganjil
+    vector<int> genap, ganjil;
+
+    for (int i = 0; i < data.size(); i++) {
+        if (data[i] % 2 == 0) {
+            genap.push_back(data[i]);
+        } else {
+            ganjil.push_back(data[i]);
+        }
+    }
+
+    //Menampilkan data array yang diinputkan user di awal
+    cout << "Data array: ";
+    for (int i = 0; i < data.size(); i++) {
+        cout << data[i] << " ";
     }
     cout << endl;
 
-    cout << "Data Array : "; //output elemen array
-    for (int i = 0; i < panjang; i++)
-    {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
-
-    cout << "Nomor Genap : "; //menampilkan angka genap
-    for (int i = 0; i < panjang; i++)
-    {
-        if (arr[i] % 2 == 0)
-        {
-            cout << arr[i] << ", ";
+    //menampilkan nomor genap hasil pemisahan dari vektor data
+    cout << "Nomor genap: ";
+    for (int i = 0; i < genap.size(); i++) {
+        cout << genap[i];
+        if (i < genap.size() - 1) {
+            cout << ", ";
         }
     }
     cout << endl;
 
-    cout << "Nomor Ganjil : "; //menampilkan angka genap
-    for (int i = 0; i < panjang; i++)
-    {
-        if (arr[i] % 2 != 0)
-        {
-            cout << arr[i] << ", ";
+    //menampilkan nomor ganjil hasil pemisahan dari vektor data
+    cout << "Nomor ganjil: ";
+    for (int i = 0; i < ganjil.size(); i++) {
+        cout << ganjil[i];
+        if (i < ganjil.size() - 1) {
+            cout << ", ";
         }
     }
+    cout << endl;
+
+    return 0;
 }
+
 ```
 #### Output:
-
+![output1 ](https://github.com/CandraDewi/Praktikum-Struktur-Data-Assignment/assets/87966244/a4043ad9-f37c-412b-92a9-55ee3f4cc720)
 Kode di atas digunakan untuk menampilkan angka ganjil dan angka genap pada suatu array. Pertama kita mendeklarasikan variabel `panjang` dengan tipe data integer. Lalu kita membuat fungsi untuk menginputkan panjang array. Setelah itu, kita mengisikan nilai ke dalam array yang sudah dibuat. Setelah diisikan kita menampilkan seluruh nilai beserta dengan indeksnya menggunakan looping `for`. Kemudian kita akan memfilter mana yang angka ganjil dan mana yang angka genap. Untuk angka genap kita menggunakan cara dengan nilai pada array modulus 2, jika hasil modulus sama dengan 0 maka angka tersebut masuk kedalam angka genap, namun jika hasil modulus tidak sama dengan 0, maka angka tersebut masuk kedalam angka ganjil.
 
 #### Full code Screenshot:
-
+![image](https://github.com/CandraDewi/Praktikum-Struktur-Data-Assignment/assets/87966244/7d602680-17e5-409e-b153-bfbdbe8dff84)
 
 ### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
 
 ```C++
-#include <iostream> //input preprocessor directive
-using namespace std; //supaya tidak perlu menggunakan std:: disetiap input object or function
+#include <iostream>
+#include <vector>
 
-int main() //main program
-{
-    int x, y, z; //mendeklarasikan variabel x, y, z dengan tipe data integer
-    
-    cout << "Input jumlah matrix: "; //input panjang matrix
-    cin >> x;
-    cout << "Input jumlah baris: "; //input panjang baris
-    cin >> y;
-    cout << "Input jumlah kolom: "; //input panjang kolom
-    cin >> z;
-    cout << endl;
-    
-    int arr[x][y][z]; //mendeklarasikan array sesuai input
+using namespace std;
 
-    for (int i = 0; i < x; i++) //looping input elemen
-    {
-        for (int j = 0; j < y; j++)
-        {
-            for (int k = 0; k < z; k++)
-            {
-                cout << "Input Array[" << i << "][" << j << "][" << k << "] = "; //input nilai setiap elemen
-                cin >> arr[i][j][k];
-            }
-        }
-        cout << endl;
-    }
+int main() {
+    int x, y, z;
 
-    for (int i = 0; i < x; i++) //looping untuk menampilkan inputan array
-    {
-        for (int j = 0; j < y; j++)
-        {
-            for (int k = 0; k < z; k++)
-            {
-                cout << "Data Array[" << i << "][" << j << "][" << k << "] = " << arr[i][j][k] << endl; //menampilkan inputan array
+    cout << "Masukkan ukuran array tiga dimensi (x y z): ";
+    cin >> x >> y >> z;
+
+    // Membuat array tiga dimensi dengan ukuran yang diinputkan
+    vector<vector<vector<int>>> array3D(x, vector<vector<int>>(y, vector<int>(z)));
+
+    // Input elemen array tiga dimensi
+    cout << "Masukkan elemen array tiga dimensi:\n";
+    for (int i = 0; i < x; i++) {
+        for (int j = 0; j < y; j++) {
+            for (int k = 0; k < z; k++) {
+                cout << "Masukkan elemen array[" << i << "][" << j << "][" << k << "]: ";
+                cin >> array3D[i][j][k];
             }
         }
     }
-    cout << endl;
 
-    for (int i = 0; i < x; i++) //looping untuk menampilkan hasil array
-    {
-        for (int j = 0; j < y; j++)
-        {
-            for (int k = 0; k < z; k++)
-            {
-                cout << arr[i][j][k] << " "; //menampilkan hasil array
+    // Menampilkan elemen array tiga dimensi dalam format matriks
+    for (int i = 0; i < x; i++) {
+        for (int j = 0; j < y; j++) {
+            for (int k = 0; k < z; k++) {
+                cout << array3D[i][j][k] << " ";
             }
             cout << endl;
         }
         cout << endl;
     }
+
+    return 0;
 }
 ```
 #### Output:
+![image](https://github.com/CandraDewi/Praktikum-Struktur-Data-Assignment/assets/87966244/a8501b06-e5a5-4c21-ad81-2c724e516101)
 
 Kode di atas digunakan untuk mencetak array tiga dimensi dengan menggunakan fungsi input dari user. Pertama kita membuat dahulu fungsi inputannya. User bisa memasukkan jumlah matrix, jumlah baris, dan jumlah kolom. Lalu kita membuat nested looping untuk menginputkan angka kedalam elemen. Lalu setelah itu, kita membuat nested looping kembali untuk menampilkan angka pada setiap elemen yang sudah diinputkan tadi. Setelah itu, kita membuat kembali nested loop untuk menampilkan angka pada elemen, namun kali ini hanya ditampilkan nilainya saja tanpa perlu menampilkan setiap angka dan elemennya.
 
 #### Full code Screenshot:
+![image](https://github.com/CandraDewi/Praktikum-Struktur-Data-Assignment/assets/87966244/93542f75-d4ea-440b-adc5-09841b34521d)
 
 
 ### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata – rata dari suatu array dengan input yang dimasukan oleh user!
