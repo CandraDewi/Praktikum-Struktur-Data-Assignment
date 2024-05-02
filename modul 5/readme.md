@@ -4,8 +4,8 @@
 
 ## Dasar Teori
 
-<p> Pada ilmu komputer variabel merupakan suatu tempat dimana sebuah kuantitas akan disimpan. Variabel berbeda dengan konstanta, yang diartikan sebagai suatu yang bisa diketahui dan tak dapat diubah.</p>
-<p>Structure (disebut juga struct) merupakan cara mengelompokkan beberapa variabel terkait ke dalam suatu tempat. Setiap Variabel dalam struct dikenal sebagai member of struct. Berbeda dengan arrya, struct dapat berisi banyak tipe data yang berbeda (int, string, double, bool, dll).</p>
+<p> Pada ilmu komputer variabel merupakan suatu tempat dimana sebuah kuantitas akan disimpan. Variabel berbeda dengan konstanta, yang diartikan sebagai suatu yang bisa diketahui dan tak dapat diubah.[1]</p>
+<p>Structure (disebut juga struct) merupakan cara mengelompokkan beberapa variabel terkait ke dalam suatu tempat. Setiap Variabel dalam struct dikenal sebagai member of struct. Berbeda dengan arrya, struct dapat berisi banyak tipe data yang berbeda (int, string, double, bool, dll).[2]</p>
 
 
 ## Guided 
