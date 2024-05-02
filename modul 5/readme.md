@@ -64,6 +64,15 @@ int main() {
     return 0;
 }
 ```
+### Penjelasan: 
+<p>Program ini mendefinisikan struktur data bernama Buku yang digunakan untuk menyimpan informasi tentang sebuah buku. Struktur ini memiliki lima anggota:
+    
+- judul_buku: String untuk menyimpan judul buku.
+- pengarang: String untuk menyimpan nama pengarang.
+- penerbit: String untuk menyimpan nama penerbit.
+- tebal_halaman: Integer untuk menyimpan tebal buku dalam halaman.
+- harga_buku: Double untuk menyimpan harga buku.</p>
+
 
 
 
@@ -151,6 +160,8 @@ int main() {
 
 }
 ```
+### Penjelasan:
+<p>Kode program di atas merupakan program yang dibuat untuk menampilkan informasi tentang dua hewan, yaitu kucing dan penyu. Program ini menggunakan struktur data untuk menyimpan informasi tentang hewan, dan kemudian menampilkan informasi tersebut ke terminal. </p>
 
 
 ## Unguided 
@@ -207,8 +218,30 @@ int main() {
     return 0;
 }
 ```
+### Penjelasan :
+<p> Program ini mendefinisikan struktur data yang disebut Buku yang digunakan untuk menyimpan informasi tentang  buku. Struktur ini memiliki lima anggota: 
+    
+- book_title: Sebuah string yang berisi judul buku.
+ 
+- Penulis: Sebuah string yang berisi nama penulis.
+  
+- Penerbit: Sebuah string yang berisi nama penerbit.
+  
+- page_thickness: Bilangan bulat untuk menyimpan ketebalan buku dalam halaman.
+  
+- book_price: Berfungsi ganda untuk menyimpan harga buku.
+  
+Array daftar_buku: Program ini mendeklarasikan array bernama book_list dengan tipe data Books.
+Array ini memiliki ukuran konstan "number_of Books" dan diinisialisasi dengan nilai 5. Artinya array ini dapat menyimpan informasi hingga 5 buku.
+
+    
+Selanjutnya, gunakan lima  array string  untuk menyimpan data tentang judul buku, penulis, penerbit, berat halaman, dan harga buku. Data dalam array ini  disalin ke  array book_list menggunakan for loop. Dan loop for lainnya untuk menampilkan informasi tentang setiap buku.
+Informasi yang ditampilkan meliputi judul, pengarang, penerbit, berat halaman, dan harga buku.
 
 
+Oleh karena itu, kode program C++ ini menunjukkan cara sederhana untuk  menyimpan dan menampilkan informasi tentang buku menggunakan struktur data dan array.
+Kita dapat memodifikasi program untuk memasukkan lebih banyak buku, menambahkan fungsi pencarian buku, dan menghitung total harga buku.
+</p>
 
 
 #### Output:
@@ -220,10 +253,12 @@ int main() {
 ![image](https://github.com/CandraDewi/Praktikum-Struktur-Data-Assignment/assets/87966244/6f58a1b5-da24-4eca-b53b-6cfa5a9fbe1f)
 
 ### 2. Apa yang terjadi jika deklarasi variabel struct yang dibuat pada tugas guided 1, berjenis array. Bagaimana cara mengisi data dan menampilkannya?
+<p>Jika variabel struct yang dibuat pada guided 1, berjenis array. Maka cara mengisi datanya dengan membuat list array dan menampilkannya seperti yang terlampir pada Unguided 1. </p>
 
 
-
-## Kesimpulan
+## Kesimpulan:
+<p>
+Struct (tipe data menyimpan) merupakan tipe data abstrak yang di dalamnya dapat menyimpan berbagai macam artibut atau jenis data string, int, double, dll. Dengan kata lain Struct merupakan cara yang efektif untuk mengelompokkan data terkait menjadi satu kesatuan dalam sebuah unit yang bernama struct. Setiap anggota struct memiliki nama yang unik untuk mengaksesnya. Struct berguna untuk membuat program lebih terorganisir dan mudah dipahami karena data dikelompokkan berdasarkan kategori. Array dapat dikombinasikan dengan struct untuk menyimpan banyak data dengan struktur yang sama. Dengan menggunakan struct, program akan menangani data kompleks dengan lebih baik, membuat kode lebih mudah dibaca dan dipahami dan memudahkan pengelolaan data yang berhubungan.</p>
 
 
 ## Referensi
