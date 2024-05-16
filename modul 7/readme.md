@@ -280,7 +280,13 @@ int main() {
 
 ```
 ### Penjelasan :
-<p></p>
+<p>Kode diatas merupakan program untuk menentukan apakah sebuah kata adalah polindrom atau bukan. 
+
+Pertama program akan membersihkan kata/ kalimat dari karakter non-alfanumerik dan mengubah huruf menjadi huruf kecil. Lalu melalui loop setiap karakter akan dicek apakah alfanumerik menggunakan isalnum. Jika iya, maka program akan mengubahnya menjadi huruf kecil menggunakan tolower dan ditambahkan ke string cleaned. 
+
+Selanjutnya program akan memeriksa melalui fungsi is_palindrome apakah kata inputan user merupakan polindrom atau bukan menggunakan stack. Kemudian, karakter dari kata/ kalimat dibandingkan dengan karakter dari top stack. Jika semua karakter cocok, maka kalimat tersebut adalah palindrom Jika ada perbedaan, maka kalimat tersebut bukan palindrom.
+
+Pada main program akan meminta user untuk menginputkan kata menggunakan getline. Lalu kalimat tersebut akan diperiksa menggunakan fungsi is_palindrome dan hasilnya akan dicetak. Jika kata merupakan palindrom maka program akan mencetak Kalimat tersebut adalah palindrom jika bukan maka program akan menampilkan Kalimat tersebut bukan palindrom. Setelah selesai, program akan menampilkan nama pembuat program.</p>
 
 
 #### Output:
