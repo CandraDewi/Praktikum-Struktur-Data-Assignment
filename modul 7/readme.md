@@ -430,7 +430,19 @@ int main() {
 
 
 ## Penjelasan:
+<p>Pertama program akan menentukan ukuran maksimal queue pada `const int maksimalQueue` yaitu 5. `int front = 0`; dan `int back = 0` menandai posisi depan dan belakang dari queue. Elemen-elemen dalam queue disimpan dalam array `string queueTeller[5]`.
 
+- Fungsi `bool isFull()` digunakan untuk mengecek apakah queue penuh atau tidak. 
+- Fungsi `bool is Empty` digunakan untuk mengecek apakah queue kosong atau tidak.
+- Fungsi `void enqueueAntrian(string data)` digunakan untuk menambahkan elemen baru ke dalam antrian. Jika antrian penuh maka program akan mencetak pesan "Antrian penuh". Jika 
+ika antrian kosong, menambahkan elemen pada posisi pertama dan menaikkan `front` dan `back`
+- Fungsi `void dequeueAntrian()` digunakan untuk menghapus elemen depan dari antrian.
+- `int countQueue()` digunakan untuk mengembalikan jumlah elemen dalam antrian. 
+- `void clearQueue` digunakan untuk menghapus semua elemen dalam queue. 
+- `void viewQueue` digunakan untuk menampilkan isi queue.
+
+Pertama program akan mendeklarasikan variabel `int choice` untuk menyimpan pilihan menu user dan `string name` yang menyimpan nama yang akan dimasukkan ke queue. Lalu program akan menampilkan opsi menu melalui `void displayMenu()`. Program dapat menambahkan, menghapus, menampilkan, atau menghapus semua elemen dalam antrian sesuai dengan pilihan pengguna. Melalui perulangan `(loop do-while)` program akan menampilkan menu dan memproses inputan user sampai user memilih untuk keluar (opsi 6). Setelah keluar dari loop,program akan mencetak nama pembuat program.
+</p>
 
 ## Kesimpulan:
 Kesimpulan tentang stack dan queue adalah sebagai berikut:
