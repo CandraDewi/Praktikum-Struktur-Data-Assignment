@@ -7,7 +7,7 @@ using namespace std;
 const int maksimalQueue = 5; // Maksimal antrian
 int front = 0; 
 int back = 0; 
-string queueTeller[5]; // Array untuk menyimpan antrian
+string queueTeller[5]; 
 
 bool isFull() { // Pengecekan antrian penuh atau tidak
     return back == maksimalQueue;
