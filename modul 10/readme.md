@@ -37,16 +37,12 @@ j. `Traverse` : digunakan untuk mengunjungi seluruh node-node pada tree dengan c
 ### 1. Program Graph
 
 ```C++
-// MODUL 10 - GRAPH AND TREE
-// JUMAT, 31 MEI 24
-// GUIDED 1 - GRAPH
+#include <iostream>
+#include <iomanip>
 
-#include<iostream>
-#include<iomanip>
 using namespace std;
 
-// array `simpul` berisi nama" kota
-string simpul[7] = {"Ciamis",
+string simpul[7] = {"ciamis",
                     "Bandung",
                     "Bekasi",
                     "Tasikmalaya",
@@ -54,9 +50,8 @@ string simpul[7] = {"Ciamis",
                     "Purwokerto",
                     "Yogyakarta"};
 
-// Matriks jarak antar kota
 int busur[7][7] = {
-    {0, 7, 8, 0, 0, 0, 0,},
+    {0, 7, 8, 0, 0, 0, 0},
     {0, 0, 5, 0, 9, 15, 0},
     {0, 5, 0, 9, 5, 0, 0},
     {0, 0, 0, 2, 4, 0, 8},
@@ -64,24 +59,20 @@ int busur[7][7] = {
     {0, 0, 7, 0, 0, 9, 4},
     {0, 0, 0, 0, 8, 0, 0}
 };
-// Menampilkan grafik dari kota" tsb
-void tampilGraph(){
-    for (int baris = 0; baris < 7; baris++){
+
+void tampilGraph() {
+    for (int baris = 0; baris < 7; baris++) {
         cout << simpul[baris] << " : ";
-        for (int kolom = 0; kolom < 7; kolom++){
-            if (busur[baris][kolom] != 0)
+        for (int kolom = 0; kolom < 7; kolom++) {
+            if (busur[baris][kolom] !=0)
                 cout << " -> " << simpul[kolom] << "(" << busur[baris][kolom] << ")";
         }
         cout << endl;
     }
 }
-// main program
-int main(){ 
-    tampilGraph(); // Menampilkan grafik dari kota" tsb
-    // mencetak nama pembuat program
-    cout << endl;
-    cout << "By : Vania Noverina - 2311110031" << endl;
-    cout << endl; 
+
+int main() {
+    tampilGraph();
     return 0;
 }
 ```
@@ -98,16 +89,17 @@ Melalui fungsi `tampilGraph` program akan melakukan iterasi pada  setiap baris b
 
 ```C++
 #include <iostream>
+
 using namespace std;
 
-// Definisi struktur pohon
+//definisi struktur pohon
 struct pohon {
     pohon* kanan;
     char data;
     pohon* kiri;
 };
 
-// Deklarasi variabel global
+//Deklarasi variable global
 pohon* simpul;
 pohon* root;
 pohon* saatIni;
@@ -115,20 +107,20 @@ pohon* helperA;
 pohon* helperB;
 pohon* alamat[256];
 
-// Fungsi untuk inisialisasi root
+//fungsi untuk inisialisasi root
 void inisialisasi() {
     root = NULL;
 }
 
-// Fungsi untuk membuat simpul baru
+//Fungsi untuk membuat simpul baru
 void simpulBaru(char dataMasukkan) {
     simpul = new pohon;
-    simpul->data = dataMasukkan;
-    simpul->kanan = NULL;
-    simpul->kiri = NULL;
+    simpul ->data = dataMasukkan;
+    simpul ->kanan = NULL;
+    simpul ->kiri = NULL;
 }
 
-// Fungsi untuk membuat simpul akar
+//fungsi untuk membuat simpul akar
 void simpulAkar() {
     if (root == NULL) {
         char dataAnda;
@@ -142,10 +134,10 @@ void simpulAkar() {
     }
 }
 
-// Fungsi untuk menambah simpul
+//fungsi untuk menambah simpul
 void tambahSimpul() {
     if (root != NULL) {
-        int i = 1, j = 1, penanda = 0;
+        int i = 1, j=1, penanda=0;
         char dataUser;
         alamat[i] = root;
 
@@ -155,7 +147,7 @@ void tambahSimpul() {
             if (dataUser != '0') {
                 simpulBaru(dataUser);
                 saatIni = alamat[i];
-                saatIni->kiri = simpul;
+                saatIni -> kiri = simpul;
                 j++;
                 alamat[j] = simpul;
             } else {
@@ -169,30 +161,30 @@ void tambahSimpul() {
                 if (dataUser != '0') {
                     simpulBaru(dataUser);
                     saatIni = alamat[i];
-                    saatIni->kanan = simpul;
+                    saatIni ->kanan = simpul;
                     j++;
                     alamat[j] = simpul;
                 } else {
                     penanda = 1;
                     j++;
                     alamat[j] = NULL;
-            }
+                }
             }
             i++;
         }
     }
 }
 
-// Fungsi untuk membaca pohon
+//fungsi untuk membaca pohon
 void bacaPohon() {
     if (root != NULL) {
-        int i = 1, n = 1, pencacah = 0;
+        int i = 1, n=1, pencacah  = 0;
         cout << endl;
         while (alamat[i] != NULL) {
             saatIni = alamat[i];
             cout << saatIni->data << " ";
             pencacah++;
-            if (pencacah == n) {
+            if (pencacah == n){
                 cout << endl;
                 pencacah = 0;
                 n = n * 2;
@@ -202,16 +194,12 @@ void bacaPohon() {
     }
 }
 
-// Fungsi utama
-int main() {
+//fungsi utama
+int main () {
     inisialisasi();
     simpulAkar();
     tambahSimpul();
     bacaPohon();
-    // mencetak nama pembuat program
-    cout << endl;
-    cout << "By : Vania Noverina - 2311110031" << endl;
-    cout << endl; 
     return 0;
 }
 ```
